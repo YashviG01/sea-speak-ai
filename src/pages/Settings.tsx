@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -23,8 +22,6 @@ import Navigation from "@/components/Navigation";
 import OceanBackground from "@/components/OceanBackground";
 
 const Settings = () => {
-  const { theme, setTheme } = useTheme();
-  
   const [profile, setProfile] = useState({
     name: "Dr. Sarah Chen",
     email: "sarah.chen@oceanresearch.org",
@@ -161,21 +158,6 @@ const Settings = () => {
               <Separator />
 
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="space-y-0.5">
-                    <Label className="text-base">Dark Mode</Label>
-                    <p className="text-sm text-muted-foreground">Toggle between light and dark themes</p>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Sun className="w-4 h-4 text-muted-foreground" />
-                    <Switch
-                      checked={theme === 'dark'}
-                      onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
-                    />
-                    <Moon className="w-4 h-4 text-muted-foreground" />
-                  </div>
-                </div>
-
                 <div className="flex items-center justify-between">
                   <div className="space-y-0.5">
                     <Label className="text-base">Auto-refresh Data</Label>
