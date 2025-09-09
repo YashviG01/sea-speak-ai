@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -22,6 +23,8 @@ import Navigation from "@/components/Navigation";
 import OceanBackground from "@/components/OceanBackground";
 
 const Settings = () => {
+  const { theme, setTheme } = useTheme();
+  
   const [profile, setProfile] = useState({
     name: "Dr. Sarah Chen",
     email: "sarah.chen@oceanresearch.org",
@@ -32,7 +35,6 @@ const Settings = () => {
   const [preferences, setPreferences] = useState({
     language: "en",
     timezone: "UTC",
-    darkMode: false,
     notifications: true,
     autoRefresh: true,
     dataUnits: "metric"
@@ -167,8 +169,8 @@ const Settings = () => {
                   <div className="flex items-center space-x-2">
                     <Sun className="w-4 h-4 text-muted-foreground" />
                     <Switch
-                      checked={preferences.darkMode}
-                      onCheckedChange={(checked) => setPreferences({...preferences, darkMode: checked})}
+                      checked={theme === 'dark'}
+                      onCheckedChange={(checked) => setTheme(checked ? 'dark' : 'light')}
                     />
                     <Moon className="w-4 h-4 text-muted-foreground" />
                   </div>

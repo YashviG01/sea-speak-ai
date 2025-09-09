@@ -73,7 +73,11 @@ const Index = () => {
             <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-6">
               <div className="max-w-2xl">
                 <div className="flex justify-center mb-4">
-                  <Waves className="w-12 h-12 text-turquoise-300" />
+                  <img 
+                    src="/lovable-uploads/e912b6fb-4cf0-4c21-b1e9-07387cba9442.png" 
+                    alt="SeaSpeak Logo" 
+                    className="h-16 w-auto"
+                  />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">Welcome to SeaSpeak</h1>
                 <p className="text-lg md:text-xl text-turquoise-100 mb-6">

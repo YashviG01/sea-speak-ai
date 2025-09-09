@@ -39,10 +39,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 transition-smooth hover:scale-105">
-            <div className="w-8 h-8 gradient-ocean rounded-lg flex items-center justify-center">
-              <Waves className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold text-foreground">SeaSpeak</span>
+            <img 
+              src="/lovable-uploads/e912b6fb-4cf0-4c21-b1e9-07387cba9442.png" 
+              alt="SeaSpeak Logo" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
