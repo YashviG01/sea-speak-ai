@@ -11,7 +11,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import logoSimple from "@/assets/logo-simple.png";
+
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,13 +37,9 @@ const Navigation = () => {
     <header className="bg-card/95 backdrop-blur-sm border-b border-border shadow-surface sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Brand Name */}
           <Link to="/" className="flex items-center space-x-2 transition-smooth hover:scale-105">
-            <img 
-              src={logoSimple} 
-              alt="SeaSpeak" 
-              className="h-10 w-10 object-contain"
-            />
+            <h1 className="text-xl font-bold text-foreground">FloatChat</h1>
           </Link>
 
           {/* Desktop Navigation */}

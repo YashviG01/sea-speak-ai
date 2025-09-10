@@ -17,7 +17,7 @@ import OceanBackground from "@/components/OceanBackground";
 import heroOcean from "@/assets/hero-ocean.jpg";
 import dashboardPreviewLight from "@/assets/dashboard-preview-light.jpg";
 import dashboardPreviewDark from "@/assets/dashboard-preview-dark-new.jpg";
-import logoSimple from "@/assets/logo-simple.png";
+import heroOceanNew from "@/assets/hero-ocean-new.jpg";
 
 const Index = () => {
   const quickActions = [
@@ -69,19 +69,12 @@ const Index = () => {
         <div className="relative mb-12 rounded-2xl overflow-hidden shadow-deep">
           <div 
             className="bg-cover bg-center h-64 md:h-80"
-            style={{ backgroundImage: `url(${heroOcean})` }}
+            style={{ backgroundImage: `url(${heroOceanNew})` }}
           >
             <div className="absolute inset-0 gradient-deep opacity-80" />
             <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-6">
               <div className="max-w-2xl">
-                <div className="flex justify-center mb-4">
-                  <img 
-                    src={logoSimple} 
-                    alt="SeaSpeak Logo" 
-                    className="h-16 w-auto"
-                  />
-                </div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">Welcome to SeaSpeak</h1>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">Welcome to FloatChat</h1>
                 <p className="text-lg md:text-xl text-turquoise-100 mb-6">
                   AI-powered platform for exploring oceanographic data through natural language queries and intelligent visualizations
                 </p>
