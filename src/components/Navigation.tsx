@@ -11,6 +11,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import logoSimple from "@/assets/logo-simple.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,7 +40,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 transition-smooth hover:scale-105">
             <img 
-              src="/lovable-uploads/e912b6fb-4cf0-4c21-b1e9-07387cba9442.png" 
+              src={logoSimple} 
               alt="SeaSpeak" 
               className="h-10 w-10 object-contain"
             />

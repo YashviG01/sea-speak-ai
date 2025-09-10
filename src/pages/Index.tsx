@@ -15,7 +15,9 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import OceanBackground from "@/components/OceanBackground";
 import heroOcean from "@/assets/hero-ocean.jpg";
-import dataVisualization from "@/assets/data-visualization.jpg";
+import dashboardPreviewLight from "@/assets/dashboard-preview-light.jpg";
+import dashboardPreviewDark from "@/assets/dashboard-preview-dark-new.jpg";
+import logoSimple from "@/assets/logo-simple.png";
 
 const Index = () => {
   const quickActions = [
@@ -74,7 +76,7 @@ const Index = () => {
               <div className="max-w-2xl">
                 <div className="flex justify-center mb-4">
                   <img 
-                    src="/lovable-uploads/e912b6fb-4cf0-4c21-b1e9-07387cba9442.png" 
+                    src={logoSimple} 
                     alt="SeaSpeak Logo" 
                     className="h-16 w-auto"
                   />
@@ -172,12 +174,21 @@ const Index = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div 
-                className="h-40 bg-cover bg-center rounded-lg mb-4 flex items-center justify-center"
-                style={{ backgroundImage: `url(${dataVisualization})` }}
-              >
-                <div className="bg-black/50 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
-                  <p className="text-sm">Real-time ARGO float positions</p>
+              <div className="relative h-40 rounded-lg mb-4 overflow-hidden">
+                <img 
+                  src={dashboardPreviewLight} 
+                  alt="Dashboard Preview"
+                  className="w-full h-full object-cover dark:hidden"
+                />
+                <img 
+                  src={dashboardPreviewDark} 
+                  alt="Dashboard Preview Dark"
+                  className="w-full h-full object-cover hidden dark:block"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-black/50 text-white px-4 py-2 rounded-lg backdrop-blur-sm">
+                    <p className="text-sm">Real-time ARGO float positions</p>
+                  </div>
                 </div>
               </div>
               <div className="space-y-2 text-sm">
